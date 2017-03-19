@@ -68,7 +68,7 @@ class nubis_apache(
     $::project_name:
       tags     => [ 'apache' ],
       port     => $port,
-      check    => "/usr/bin/curl -If http://localhost/status:${port}",
+      check    => "/usr/bin/curl -If http://localhost:${port}/status/index.html",
       interval => '30s',
   }
 
