@@ -67,7 +67,7 @@ class nubis_apache(
   nubis::discovery::service {
     $::project_name:
       tags     => [ 'apache' ],
-      port     => $port,
+      port     => '81',
       check    => "/usr/bin/curl -If http://localhost:81",
       interval => '30s',
   }
